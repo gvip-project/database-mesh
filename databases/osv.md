@@ -91,6 +91,12 @@ record quality is inherited from sources.
   Coverage is additionally spotty and lagged
   (see the [apache/security-site#82](https://github.com/apache/security-site/pull/82)
   examples above).
+- **CVE conversion ranges come from NVD, not the CNA**:
+  converted records derive their Git ranges from NVD's CPE configuration
+  (`source: CPE_RANGE`),
+  so NVD's changes to the CNA's version bounds are exported as OSV ranges,
+  and aliases may name GHSA IDs that OSV cannot resolve.
+  See [CVE-2026-109618/109619](../case-studies/cve-2026-109618-php2shell.md).
 - **Source dilution under one CVE ID**:
   the converted CVE record and the GitHub advisory for the same issue
   can disagree;

@@ -98,6 +98,12 @@ flowchart LR
   See [CVE-2026-50628](../case-studies/cve-2026-50628-cxf.md),
   where the CNA's precise Maven coordinates
   were replaced by a product-wide CPE.
+- **Analysis can go beyond the CNA and leave no trail**:
+  CPE ranges may be widened past the CNA's stated bounds,
+  identical CNA inputs may receive different NVD CVSS scores,
+  and products may be added from third-party advisories
+  that are not added to the record's references.
+  See [CVE-2026-109618/109619](../case-studies/cve-2026-109618-php2shell.md).
 - **Analysis lag and backlog**:
   records can sit "Awaiting Analysis" for extended periods
   (the 2024 backlog being the extreme case),

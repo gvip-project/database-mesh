@@ -98,6 +98,11 @@ often little more than a description and a score.
   and remain in that state months later.
   See [CVE-2026-50628](../case-studies/cve-2026-50628-cxf.md)
   (GHSA-g5v7-jchf-7jrr).
+- **Repository advisories outside supported ecosystems never reach the database**:
+  a CNA may publish its advisory on GitHub and cite the GHSA ID in the CVE record,
+  yet no global advisory, not even an unreviewed stub, is created,
+  leaving the GHSA ID resolvable only in the repository's security tab.
+  See [CVE-2026-109618/109619](../case-studies/cve-2026-109618-php2shell.md).
 - **The reviewed/unreviewed split silently partitions downstream visibility**:
   consumers that only take reviewed advisories (GitLab, Dependabot)
   simply do not see unreviewed records,
